@@ -1,22 +1,9 @@
-﻿
-using Baseline.Reflection;
-using ConsoleApp.Interfaces;
-using ConsoleApp.Models;
-using ConsoleApp.Security;
-using ConsoleApp.Services;
-using ImTools;
-using Newtonsoft.Json;
-using System.Collections;
-using System.Diagnostics;
-using System.Net;
-using System.Text;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 class Program
 {
     public static void Main()
     {
-        
         string path = "D:/user.json";
         List<User> users = new List<User>()
         {
@@ -42,10 +29,14 @@ class Program
 
         var read = File.ReadAllText(path);
         var reader = JsonConvert.DeserializeObject<List<User>>(read);
-        foreach(var item in reader)
+        foreach (var item in reader)
         {
-            Console.WriteLine(item.Name );
+            Console.WriteLine(item.Name);
         }
     }
-   
+}
+class User
+{
+    public string Name { get; set; }
+    public string Email { get; set; }
 }
