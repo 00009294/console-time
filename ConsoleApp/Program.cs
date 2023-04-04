@@ -8,9 +8,6 @@ using ImTools;
 using Newtonsoft.Json;
 using System.Collections;
 using System.Diagnostics;
-using System.Net;
-using System.Text;
-using System.Text.Json.Serialization;
 
 class Program
 {
@@ -35,17 +32,6 @@ class Program
                 Name = "Abdurohman",
                 Email = "Email"
             }
-        };
 
-        var json = JsonConvert.SerializeObject(users);
-        File.WriteAllText(path, json);
-
-        var read = File.ReadAllText(path);
-        var reader = JsonConvert.DeserializeObject<List<User>>(read);
-        foreach(var item in reader)
-        {
-            Console.WriteLine(item.Name );
-        }
     }
-   
 }
