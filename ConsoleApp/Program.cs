@@ -1,37 +1,27 @@
 ﻿
-using Baseline.Reflection;
-using ConsoleApp.Interfaces;
-using ConsoleApp.Models;
-using ConsoleApp.Security;
-using ConsoleApp.Services;
-using ImTools;
-using Newtonsoft.Json;
-using System.Collections;
+
 using System.Diagnostics;
 
 class Program
 {
     public static void Main()
     {
-        
-        string path = "D:/user.json";
-        List<User> users = new List<User>()
+        while (true)
         {
-            new User()
-            {
-                Name = "Ali",
-                Email = "Email"
-            },
-            new User()
-            {
-                Name = "Javlonbek",
-                Email = "Email"
-            },
-            new User()
-            {
-                Name = "Abdurohman",
-                Email = "Email"
-            }
+            //-------------------------------------------------------------------------------
+            //int currentHour = DateTime.Now.Hour;
+            //int currentMinute = DateTime.Now.Minute;
+            //int currentSecond = DateTime.Now.Second;
+            //Console.Clear();
+            //Console.WriteLine(currentHour + ":" + currentMinute + ":" + currentSecond);
+            //Thread.Sleep(1000);
+            //--------------------------------------------------------------------------------
+            DateTime dt = DateTime.Now;
+            string currentTime = DateTime.Now.ToString("HH:m:ss");
+            Console.Clear();
+            Console.WriteLine(currentTime);
+            Thread.Sleep(1000);
+        }
 
     }
 }
