@@ -15,9 +15,9 @@ class Program
             //Console.Clear();
             //Console.WriteLine(currentHour + ":" + currentMinute + ":" + currentSecond);
             //Thread.Sleep(1000);
-            //--------------------------------------------------------------------------------
+            //---------------------------------------------------------------------------------
             DateTime dt = DateTime.Now;
-            string currentTime = DateTime.Now.ToString("HH:m:ss");
+            string currentTime = DateTime.Now.ToString("HH:mm:ss");
             Console.Clear();
             Console.WriteLine(currentTime);
             Thread.Sleep(1000);
